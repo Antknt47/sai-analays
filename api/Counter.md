@@ -12,100 +12,100 @@
 
 
 ## sai_create_counter_fn
-Create counter
+**Brief**: Create counter
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| counter_id | counter_id | 出力 | Counter id |
-| switch_id | switch_id | 出力 | Switch id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| counter_id | sai_object_id_t * | 出力 | Counter id |
+| switch_id | sai_object_id_t | 入力 | Switch id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success
 
 
 ## sai_remove_counter_fn
-Remove counter
+**Brief**: Remove counter
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| counter_id | counter_id | 出力 | Counter id |
+| counter_id | sai_object_id_t | 入力 | Counter id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_counter_attribute_fn
-Set counter attribute Value
+**Brief**: Set counter attribute Value
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| counter_id | counter_id | 出力 | Counter id |
-| attr | attr | 出力 | Attribute |
+| counter_id | sai_object_id_t | 入力 | Counter id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_counter_attribute_fn
-Get counter attribute Value
+**Brief**: Get counter attribute Value
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| counter_id | counter_id | 出力 | Counter id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| counter_id | sai_object_id_t | 入力 | Counter id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_counter_stats_fn
-Get counter statistics counters. Deprecated for backward compatibility.
+**Brief**: Get counter statistics counters. Deprecated for backward compatibility.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| counter_id | counter_id | 出力 | Counter id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
-| counters | counters | 入力 | Array of resulting counter values. |
+| counter_id | sai_object_id_t | 入力 | Counter id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_counter_stats_ext_fn
-Get counter statistics counters extended.
+**Brief**: Get counter statistics counters extended.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| counter_id | counter_id | 出力 | Counter id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
-| mode | mode | 出力 | Statistics mode |
-| counters | counters | 入力 | Array of resulting counter values. |
+| counter_id | sai_object_id_t | 入力 | Counter id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
+| mode | sai_stats_mode_t | 入力 | Statistics mode |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_clear_counter_stats_fn
-Clear counter statistics counters.
+**Brief**: Clear counter statistics counters.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| counter_id | counter_id | 出力 | Counter id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
+| counter_id | sai_object_id_t | 入力 | Counter id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 

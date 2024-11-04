@@ -9,54 +9,54 @@
 
 
 ## sai_create_ipmc_entry_fn
-Create IPMC entry
+**Brief**: Create IPMC entry
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipmc_entry | ipmc_entry | 出力 | IPMC entry |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| ipmc_entry | sai_ipmc_entry_t * | 入力 | IPMC entry |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_ipmc_entry_fn
-Remove IPMC entry
+**Brief**: Remove IPMC entry
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipmc_entry | ipmc_entry | 出力 | IPMC entry |
+| ipmc_entry | sai_ipmc_entry_t * | 入力 | IPMC entry |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_ipmc_entry_attribute_fn
-Set IPMC entry attribute value
+**Brief**: Set IPMC entry attribute value
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipmc_entry | ipmc_entry | 出力 | IPMC entry |
-| attr | attr | 出力 | Attribute |
+| ipmc_entry | sai_ipmc_entry_t * | 入力 | IPMC entry |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ipmc_entry_attribute_fn
-Get IPMC entry attribute value
+**Brief**: Get IPMC entry attribute value
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipmc_entry | ipmc_entry | 出力 | IPMC entry |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| ipmc_entry | sai_ipmc_entry_t * | 入力 | IPMC entry |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 

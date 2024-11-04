@@ -15,146 +15,146 @@
 
 
 ## sai_create_fdb_entry_fn
-Create FDB entry
+**Brief**: Create FDB entry
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| fdb_entry | fdb_entry | 出力 | FDB entry |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| fdb_entry | sai_fdb_entry_t * | 入力 | FDB entry |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_fdb_entry_fn
-Remove FDB entry
+**Brief**: Remove FDB entry
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| fdb_entry | fdb_entry | 出力 | FDB entry |
+| fdb_entry | sai_fdb_entry_t * | 入力 | FDB entry |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_fdb_entry_attribute_fn
-Set FDB entry attribute value
+**Brief**: Set FDB entry attribute value
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| fdb_entry | fdb_entry | 出力 | FDB entry |
-| attr | attr | 出力 | Attribute |
+| fdb_entry | sai_fdb_entry_t * | 入力 | FDB entry |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_fdb_entry_attribute_fn
-Get FDB entry attribute value
+**Brief**: Get FDB entry attribute value
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| fdb_entry | fdb_entry | 出力 | FDB entry |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| fdb_entry | sai_fdb_entry_t * | 入力 | FDB entry |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_flush_fdb_entries_fn
-Remove all FDB entries by attribute set in sai_fdb_flush_attr
+**Brief**: Remove all FDB entries by attribute set in sai_fdb_flush_attr
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| switch_id | switch_id | 出力 | Switch object id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| switch_id | sai_object_id_t | 入力 | Switch object id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_fdb_event_notification_fn
-FDB notifications
+**Brief**: FDB notifications
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| count | count | 出力 | Number of notifications |
-| data | data | 入力 | Pointer to FDB event notification data array |
+| count | uint32_t | 入力 | Number of notifications |
+| data | sai_fdb_event_notification_data_t * | 入力 | Pointer to FDB event notification data array |
 
 **Return Value**: -
 
 
 ## sai_bulk_create_fdb_entry_fn
-Bulk create FDB entry
+**Brief**: Bulk create FDB entry
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| object_count | object_count | 出力 | Number of objects to create |
-| fdb_entry | fdb_entry | 出力 | List of object to create |
-| attr_count | attr_count | 出力 | List of attr_count. Caller passes the number |
-| attr_list | attr_list | 出力 | List of attributes for every object. |
-| mode | mode | 入力 | Bulk operation error handling mode. |
-| object_statuses | object_statuses | 出力 | List of status for every object. Caller needs to |
+| object_count | uint32_t | 入力 | Number of objects to create |
+| fdb_entry | sai_fdb_entry_t * | 入力 | List of object to create |
+| attr_count | uint32_t * | 入力 | List of attr_count. Caller passes the number |
+| *attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
+| mode | sai_bulk_op_error_mode_t | 入力 | Bulk operation error handling mode. |
+| object_statuses | sai_status_t * | 出力 | List of status for every object. Caller needs to |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success when all objects are created or
 
 
 ## sai_bulk_remove_fdb_entry_fn
-Bulk remove FDB entry
+**Brief**: Bulk remove FDB entry
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| object_count | object_count | 出力 | Number of objects to remove |
-| fdb_entry | fdb_entry | 出力 | List of objects to remove |
-| mode | mode | 入力 | Bulk operation error handling mode. |
-| object_statuses | object_statuses | 出力 | List of status for every object. Caller needs to |
+| object_count | uint32_t | 入力 | Number of objects to remove |
+| fdb_entry | sai_fdb_entry_t * | 入力 | List of objects to remove |
+| mode | sai_bulk_op_error_mode_t | 入力 | Bulk operation error handling mode. |
+| object_statuses | sai_status_t * | 出力 | List of status for every object. Caller needs to |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success when all objects are removed or
 
 
 ## sai_bulk_set_fdb_entry_attribute_fn
-Bulk set attribute on FDB entry
+**Brief**: Bulk set attribute on FDB entry
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| object_count | object_count | 出力 | Number of objects to set attribute |
-| fdb_entry | fdb_entry | 出力 | List of objects to set attribute |
-| attr_list | attr_list | 出力 | List of attributes to set on objects, one attribute per object |
-| mode | mode | 入力 | Bulk operation error handling mode. |
-| object_statuses | object_statuses | 出力 | List of status for every object. Caller needs to |
+| object_count | uint32_t | 入力 | Number of objects to set attribute |
+| fdb_entry | sai_fdb_entry_t * | 入力 | List of objects to set attribute |
+| attr_list | sai_attribute_t * | 入力 | List of attributes to set on objects, one attribute per object |
+| mode | sai_bulk_op_error_mode_t | 入力 | Bulk operation error handling mode. |
+| object_statuses | sai_status_t * | 出力 | List of status for every object. Caller needs to |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success when all objects are set or
 
 
 ## sai_bulk_get_fdb_entry_attribute_fn
-Bulk get attribute on FDB entry
+**Brief**: Bulk get attribute on FDB entry
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| object_count | object_count | 出力 | Number of objects to get attribute |
-| fdb_entry | fdb_entry | 出力 | List of objects to get attribute |
-| attr_count | attr_count | 出力 | List of attr_count. Caller passes the number |
-| * | * | 入力 | @param[inout] attr_list List of attributes to get on objects, one attribute per object |
-| mode | mode | 入力 | Bulk operation error handling mode |
-| object_statuses | object_statuses | 出力 | List of status for every object. Caller needs to |
+| object_count | uint32_t | 入力 | Number of objects to get attribute |
+| fdb_entry | sai_fdb_entry_t * | 入力 | List of objects to get attribute |
+| attr_count | uint32_t * | 入力 | List of attr_count. Caller passes the number |
+| *attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
+| mode | sai_bulk_op_error_mode_t | 入力 | Bulk operation error handling mode |
+| object_statuses | sai_status_t * | 出力 | List of status for every object. Caller needs to |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success when all objects are get or
 

@@ -33,379 +33,379 @@
 
 
 ## sai_create_acl_table_fn
-Create an ACL table
+**Brief**: Create an ACL table
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_id | acl_table_id | 出力 | The ACL table id |
-| switch_id | switch_id | 出力 | Switch Object id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| acl_table_id | sai_object_id_t * | 出力 | The ACL table id |
+| switch_id | sai_object_id_t | 入力 | Switch Object id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_acl_table_fn
-Delete an ACL table
+**Brief**: Delete an ACL table
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_id | acl_table_id | 出力 | The ACL table id |
+| acl_table_id | sai_object_id_t | 入力 | The ACL table id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_acl_table_attribute_fn
-Set ACL table attribute
+**Brief**: Set ACL table attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_id | acl_table_id | 出力 | The ACL table id |
-| attr | attr | 出力 | Attribute |
+| acl_table_id | sai_object_id_t | 入力 | The ACL table id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_acl_table_attribute_fn
-Get ACL table attribute
+**Brief**: Get ACL table attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_id | acl_table_id | 出力 | ACL table id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| acl_table_id | sai_object_id_t | 入力 | ACL table id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_acl_entry_fn
-Create an ACL entry
+**Brief**: Create an ACL entry
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_entry_id | acl_entry_id | 出力 | The ACL entry id |
-| switch_id | switch_id | 出力 | The Switch Object id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| acl_entry_id | sai_object_id_t * | 出力 | The ACL entry id |
+| switch_id | sai_object_id_t | 入力 | The Switch Object id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_acl_entry_fn
-Delete an ACL entry
+**Brief**: Delete an ACL entry
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_entry_id | acl_entry_id | 出力 | The ACL entry id |
+| acl_entry_id | sai_object_id_t | 入力 | The ACL entry id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_acl_entry_attribute_fn
-Set ACL entry attribute
+**Brief**: Set ACL entry attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_entry_id | acl_entry_id | 出力 | The ACL entry id |
-| attr | attr | 出力 | Attribute |
+| acl_entry_id | sai_object_id_t | 入力 | The ACL entry id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_acl_entry_attribute_fn
-Get ACL entry attribute
+**Brief**: Get ACL entry attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_entry_id | acl_entry_id | 出力 | ACL entry id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| acl_entry_id | sai_object_id_t | 入力 | ACL entry id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_acl_counter_fn
-Create an ACL counter
+**Brief**: Create an ACL counter
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_counter_id | acl_counter_id | 出力 | The ACL counter id |
-| switch_id | switch_id | 出力 | The switch Object id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| acl_counter_id | sai_object_id_t * | 出力 | The ACL counter id |
+| switch_id | sai_object_id_t | 入力 | The switch Object id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_acl_counter_fn
-Delete an ACL counter
+**Brief**: Delete an ACL counter
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_counter_id | acl_counter_id | 出力 | The ACL counter id |
+| acl_counter_id | sai_object_id_t | 入力 | The ACL counter id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_acl_counter_attribute_fn
-Set ACL counter attribute
+**Brief**: Set ACL counter attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_counter_id | acl_counter_id | 出力 | The ACL counter id |
-| attr | attr | 出力 | Attribute |
+| acl_counter_id | sai_object_id_t | 入力 | The ACL counter id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_acl_counter_attribute_fn
-Get ACL counter attribute
+**Brief**: Get ACL counter attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_counter_id | acl_counter_id | 出力 | ACL counter id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| acl_counter_id | sai_object_id_t | 入力 | ACL counter id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_acl_range_fn
-Create an ACL Range
+**Brief**: Create an ACL Range
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_range_id | acl_range_id | 出力 | The ACL range id |
-| switch_id | switch_id | 出力 | The Switch object id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| acl_range_id | sai_object_id_t * | 出力 | The ACL range id |
+| switch_id | sai_object_id_t | 入力 | The Switch object id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_acl_range_fn
-Remove an ACL Range
+**Brief**: Remove an ACL Range
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_range_id | acl_range_id | 出力 | The ACL range id |
+| acl_range_id | sai_object_id_t | 入力 | The ACL range id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_acl_range_attribute_fn
-Set ACL range attribute
+**Brief**: Set ACL range attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_range_id | acl_range_id | 出力 | The ACL range id |
-| attr | attr | 出力 | Attribute |
+| acl_range_id | sai_object_id_t | 入力 | The ACL range id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_acl_range_attribute_fn
-Get ACL range attribute
+**Brief**: Get ACL range attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_range_id | acl_range_id | 出力 | ACL range id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| acl_range_id | sai_object_id_t | 入力 | ACL range id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_acl_table_group_fn
-Create an ACL Table Group
+**Brief**: Create an ACL Table Group
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_group_id | acl_table_group_id | 出力 | The ACL group id |
-| switch_id | switch_id | 出力 | Switch ID |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| acl_table_group_id | sai_object_id_t * | 出力 | The ACL group id |
+| switch_id | sai_object_id_t | 入力 | Switch ID |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_acl_table_group_fn
-Delete an ACL Group
+**Brief**: Delete an ACL Group
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_group_id | acl_table_group_id | 出力 | The ACL group id |
+| acl_table_group_id | sai_object_id_t | 入力 | The ACL group id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_acl_table_group_attribute_fn
-Set ACL table group attribute
+**Brief**: Set ACL table group attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_group_id | acl_table_group_id | 出力 | The ACL table group id |
-| attr | attr | 出力 | Attribute |
+| acl_table_group_id | sai_object_id_t | 入力 | The ACL table group id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_acl_table_group_attribute_fn
-Get ACL table group attribute
+**Brief**: Get ACL table group attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_group_id | acl_table_group_id | 出力 | ACL table group id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| acl_table_group_id | sai_object_id_t | 入力 | ACL table group id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_acl_table_group_member_fn
-Create an ACL Table Group Member
+**Brief**: Create an ACL Table Group Member
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_group_member_id | acl_table_group_member_id | 出力 | The ACL table group member id |
-| switch_id | switch_id | 出力 | Switch ID |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| acl_table_group_member_id | sai_object_id_t * | 出力 | The ACL table group member id |
+| switch_id | sai_object_id_t | 入力 | Switch ID |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_acl_table_group_member_fn
-Delete an ACL Group Member
+**Brief**: Delete an ACL Group Member
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_group_member_id | acl_table_group_member_id | 出力 | The ACL table group member id |
+| acl_table_group_member_id | sai_object_id_t | 入力 | The ACL table group member id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_acl_table_group_member_attribute_fn
-Set ACL table group member attribute
+**Brief**: Set ACL table group member attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_group_member_id | acl_table_group_member_id | 出力 | The ACL table group member id |
-| attr | attr | 出力 | Attribute |
+| acl_table_group_member_id | sai_object_id_t | 入力 | The ACL table group member id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_acl_table_group_member_attribute_fn
-Get ACL table group member attribute
+**Brief**: Get ACL table group member attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_group_member_id | acl_table_group_member_id | 出力 | ACL table group member id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| acl_table_group_member_id | sai_object_id_t | 入力 | ACL table group member id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_acl_table_chain_group_fn
-Create an ACL Table Chain Group
+**Brief**: Create an ACL Table Chain Group
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_chain_group_id | acl_table_chain_group_id | 入力 | The ACL sub group id |
-| switch_id | switch_id | 出力 | Switch ID |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| acl_table_chain_group_id | sai_object_id_t * | 出力 | The ACL sub group id |
+| switch_id | sai_object_id_t | 入力 | Switch ID |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_acl_table_chain_group_fn
-Delete an ACL Table Chain Group
+**Brief**: Delete an ACL Table Chain Group
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_chain_group_id | acl_table_chain_group_id | 入力 | The ACL chain_group id |
+| acl_table_chain_group_id | sai_object_id_t | 入力 | The ACL chain_group id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_acl_table_chain_group_attribute_fn
-Set ACL table chain group attribute
+**Brief**: Set ACL table chain group attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_chain_group_id | acl_table_chain_group_id | 入力 | The ACL table chain_group id |
-| attr | attr | 出力 | Attribute |
+| acl_table_chain_group_id | sai_object_id_t | 入力 | The ACL table chain_group id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_acl_table_chain_group_attribute_fn
-Get ACL table chain group attribute
+**Brief**: Get ACL table chain group attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| acl_table_chain_group_id | acl_table_chain_group_id | 入力 | ACL table chain_group id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| acl_table_chain_group_id | sai_object_id_t | 入力 | ACL table chain_group id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 

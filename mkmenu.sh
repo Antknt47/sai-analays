@@ -5,7 +5,7 @@ if [[ ! -d $1 ]]; then
     exit 1
 fi
 
-for md_file in ./md/*.md; do
+for md_file in $1/*.md; do
     if [[ ! -f "$md_file" ]]; then
         echo "File *.md not found"
         continue

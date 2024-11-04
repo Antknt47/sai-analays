@@ -17,163 +17,163 @@
 
 
 ## sai_create_udf_fn
-Create UDF
+**Brief**: Create UDF
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_id | udf_id | 出力 | UDF id |
-| switch_id | switch_id | 出力 | Switch id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| udf_id | sai_object_id_t * | 出力 | UDF id |
+| switch_id | sai_object_id_t | 入力 | Switch id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_udf_fn
-Remove UDF
+**Brief**: Remove UDF
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_id | udf_id | 出力 | UDF id |
+| udf_id | sai_object_id_t | 入力 | UDF id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_udf_attribute_fn
-Set UDF attribute
+**Brief**: Set UDF attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_id | udf_id | 出力 | UDF id |
-| attr | attr | 出力 | Attribute |
+| udf_id | sai_object_id_t | 入力 | UDF id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_udf_attribute_fn
-Get UDF attribute value
+**Brief**: Get UDF attribute value
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_id | udf_id | 出力 | UDF id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| udf_id | sai_object_id_t | 入力 | UDF id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_udf_match_fn
-Create UDF match
+**Brief**: Create UDF match
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_match_id | udf_match_id | 出力 | UDF match id |
-| switch_id | switch_id | 出力 | Switch id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| udf_match_id | sai_object_id_t * | 出力 | UDF match id |
+| switch_id | sai_object_id_t | 入力 | Switch id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_udf_match_fn
-Remove UDF match
+**Brief**: Remove UDF match
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_match_id | udf_match_id | 出力 | UDF match id |
+| udf_match_id | sai_object_id_t | 入力 | UDF match id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_udf_match_attribute_fn
-Set UDF match attribute
+**Brief**: Set UDF match attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_match_id | udf_match_id | 出力 | UDF match id |
-| attr | attr | 出力 | Attribute |
+| udf_match_id | sai_object_id_t | 入力 | UDF match id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_udf_match_attribute_fn
-Get UDF match attribute value
+**Brief**: Get UDF match attribute value
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_match_id | udf_match_id | 出力 | UDF match id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list List of attributes |
+| udf_match_id | sai_object_id_t | 入力 | UDF match id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_udf_group_fn
-Create UDF group
+**Brief**: Create UDF group
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_group_id | udf_group_id | 出力 | UDF group id |
-| switch_id | switch_id | 出力 | Switch id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| udf_group_id | sai_object_id_t * | 出力 | UDF group id |
+| switch_id | sai_object_id_t | 入力 | Switch id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_udf_group_fn
-Remove UDF group
+**Brief**: Remove UDF group
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_group_id | udf_group_id | 出力 | UDF group id |
+| udf_group_id | sai_object_id_t | 入力 | UDF group id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_udf_group_attribute_fn
-Set UDF group attribute
+**Brief**: Set UDF group attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_group_id | udf_group_id | 出力 | UDF group id |
-| attr | attr | 出力 | Attribute |
+| udf_group_id | sai_object_id_t | 入力 | UDF group id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_udf_group_attribute_fn
-Get UDF group attribute value
+**Brief**: Get UDF group attribute value
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| udf_group_id | udf_group_id | 出力 | UDF group id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| udf_group_id | sai_object_id_t | 入力 | UDF group id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 

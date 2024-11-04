@@ -24,266 +24,266 @@
 
 
 ## sai_create_ipsec_fn
-Create a IPsec object
+**Brief**: Create a IPsec object
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_id | ipsec_id | 出力 | The IPsec object id associated with this switch/PHY |
-| switch_id | switch_id | 出力 | The switch/PHY Object id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| ipsec_id | sai_object_id_t * | 出力 | The IPsec object id associated with this switch/PHY |
+| switch_id | sai_object_id_t | 入力 | The switch/PHY Object id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_ipsec_fn
-Delete the IPsec object
+**Brief**: Delete the IPsec object
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_id | ipsec_id | 出力 | The IPsec object id associated with this switch/PHY |
+| ipsec_id | sai_object_id_t | 入力 | The IPsec object id associated with this switch/PHY |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_ipsec_attribute_fn
-Set IPsec attribute
+**Brief**: Set IPsec attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_id | ipsec_id | 出力 | The IPsec object id associated with this switch/PHY |
-| attr | attr | 出力 | Attribute |
+| ipsec_id | sai_object_id_t | 入力 | The IPsec object id associated with this switch/PHY |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ipsec_attribute_fn
-Get IPsec attribute
+**Brief**: Get IPsec attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_id | ipsec_id | 出力 | The IPsec object id associated with this switch/PHY |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| ipsec_id | sai_object_id_t | 入力 | The IPsec object id associated with this switch/PHY |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_ipsec_port_fn
-Create a IPsec port
+**Brief**: Create a IPsec port
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_port_id | ipsec_port_id | 出力 | The IPsec port id |
-| switch_id | switch_id | 出力 | The switch/PHY Object id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| ipsec_port_id | sai_object_id_t * | 出力 | The IPsec port id |
+| switch_id | sai_object_id_t | 入力 | The switch/PHY Object id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_ipsec_port_fn
-Delete a IPsec port
+**Brief**: Delete a IPsec port
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_port_id | ipsec_port_id | 出力 | The IPsec port id |
+| ipsec_port_id | sai_object_id_t | 入力 | The IPsec port id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_ipsec_port_attribute_fn
-Set IPsec port attribute
+**Brief**: Set IPsec port attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_port_id | ipsec_port_id | 出力 | The IPsec port id |
-| attr | attr | 出力 | Attribute |
+| ipsec_port_id | sai_object_id_t | 入力 | The IPsec port id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ipsec_port_attribute_fn
-Get IPsec port attribute
+**Brief**: Get IPsec port attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_port_id | ipsec_port_id | 出力 | IPsec port id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| ipsec_port_id | sai_object_id_t | 入力 | IPsec port id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ipsec_port_stats_fn
-Get IPsec port counters
+**Brief**: Get IPsec port counters
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_port_id | ipsec_port_id | 出力 | IPsec port id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
-| counters | counters | 入力 | Array of resulting counter values. |
+| ipsec_port_id | sai_object_id_t | 入力 | IPsec port id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ipsec_port_stats_ext_fn
-Get IPsec port counters extended
+**Brief**: Get IPsec port counters extended
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_port_id | ipsec_port_id | 出力 | IPsec port id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
-| mode | mode | 出力 | Should match SAI_IPSEC_ATTR_STATS_MODE |
-| counters | counters | 入力 | Array of resulting counter values. |
+| ipsec_port_id | sai_object_id_t | 入力 | IPsec port id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
+| mode | sai_stats_mode_t | 入力 | Should match SAI_IPSEC_ATTR_STATS_MODE |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_clear_ipsec_port_stats_fn
-Clear IPsec port counters
+**Brief**: Clear IPsec port counters
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_port_id | ipsec_port_id | 出力 | IPsec port id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
+| ipsec_port_id | sai_object_id_t | 入力 | IPsec port id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_ipsec_sa_fn
-Create a IPsec Security Association
+**Brief**: Create a IPsec Security Association
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_sa_id | ipsec_sa_id | 出力 | The IPsec Security Association id |
-| switch_id | switch_id | 出力 | The switch/PHY Object id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| ipsec_sa_id | sai_object_id_t * | 出力 | The IPsec Security Association id |
+| switch_id | sai_object_id_t | 入力 | The switch/PHY Object id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_ipsec_sa_fn
-Delete a IPsec Security Association
+**Brief**: Delete a IPsec Security Association
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_sa_id | ipsec_sa_id | 出力 | The IPsec Security Association id |
+| ipsec_sa_id | sai_object_id_t | 入力 | The IPsec Security Association id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_ipsec_sa_attribute_fn
-Set IPsec Security Association attribute
+**Brief**: Set IPsec Security Association attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_sa_id | ipsec_sa_id | 出力 | The IPsec Security Association id |
-| attr | attr | 出力 | Attribute |
+| ipsec_sa_id | sai_object_id_t | 入力 | The IPsec Security Association id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ipsec_sa_attribute_fn
-Get IPsec Security Association attribute
+**Brief**: Get IPsec Security Association attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_sa_id | ipsec_sa_id | 出力 | IPsec Security Association id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| ipsec_sa_id | sai_object_id_t | 入力 | IPsec Security Association id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ipsec_sa_stats_fn
-Get IPsec Security Association counters
+**Brief**: Get IPsec Security Association counters
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_sa_id | ipsec_sa_id | 出力 | IPsec Security Association id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
-| counters | counters | 入力 | Array of resulting counter values. |
+| ipsec_sa_id | sai_object_id_t | 入力 | IPsec Security Association id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ipsec_sa_stats_ext_fn
-Get IPsec Security Association counters extended
+**Brief**: Get IPsec Security Association counters extended
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_sa_id | ipsec_sa_id | 出力 | IPsec Security Association id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
-| mode | mode | 出力 | Should match SAI_IPSEC_ATTR_STATS_MODE |
-| counters | counters | 入力 | Array of resulting counter values. |
+| ipsec_sa_id | sai_object_id_t | 入力 | IPsec Security Association id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
+| mode | sai_stats_mode_t | 入力 | Should match SAI_IPSEC_ATTR_STATS_MODE |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_clear_ipsec_sa_stats_fn
-Clear IPsec Security Association counters
+**Brief**: Clear IPsec Security Association counters
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ipsec_sa_id | ipsec_sa_id | 出力 | IPsec Security Association id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
+| ipsec_sa_id | sai_object_id_t | 入力 | IPsec Security Association id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_ipsec_sa_status_change_notification_fn
-IPsec SA status change notification
+**Brief**: IPsec SA status change notification
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| count | count | 出力 | Number of notifications |
-| data | data | 出力 | Array of notifications |
+| count | uint32_t | 入力 | Number of notifications |
+| data | sai_ipsec_sa_status_notification_t * | 入力 | Array of notifications |
 
 **Return Value**: -
 

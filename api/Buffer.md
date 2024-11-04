@@ -23,253 +23,253 @@
 
 
 ## sai_create_ingress_priority_group_fn
-Create ingress priority group
+**Brief**: Create ingress priority group
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ingress_priority_group_id | ingress_priority_group_id | 入力 | Ingress priority group |
-| switch_id | switch_id | 出力 | Switch id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| ingress_priority_group_id | sai_object_id_t * | 出力 | Ingress priority group |
+| switch_id | sai_object_id_t | 入力 | Switch id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_ingress_priority_group_fn
-Remove ingress priority group
+**Brief**: Remove ingress priority group
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ingress_priority_group_id | ingress_priority_group_id | 入力 | Ingress priority group id |
+| ingress_priority_group_id | sai_object_id_t | 入力 | Ingress priority group id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_ingress_priority_group_attribute_fn
-Set ingress priority group attribute
+**Brief**: Set ingress priority group attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ingress_priority_group_id | ingress_priority_group_id | 入力 | Ingress priority group id |
-| attr | attr | 出力 | Attribute to set |
+| ingress_priority_group_id | sai_object_id_t | 入力 | Ingress priority group id |
+| attr | sai_attribute_t * | 入力 | Attribute to set |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ingress_priority_group_attribute_fn
-Get ingress priority group attributes
+**Brief**: Get ingress priority group attributes
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ingress_priority_group_id | ingress_priority_group_id | 入力 | Ingress priority group id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| ingress_priority_group_id | sai_object_id_t | 入力 | Ingress priority group id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ingress_priority_group_stats_fn
-Get ingress priority group statistics counters. Deprecated for backward compatibility.
+**Brief**: Get ingress priority group statistics counters. Deprecated for backward compatibility.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ingress_priority_group_id | ingress_priority_group_id | 入力 | Ingress priority group id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
-| counters | counters | 入力 | Array of resulting counter values. |
+| ingress_priority_group_id | sai_object_id_t | 入力 | Ingress priority group id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_ingress_priority_group_stats_ext_fn
-Get ingress priority group statistics counters extended.
+**Brief**: Get ingress priority group statistics counters extended.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ingress_priority_group_id | ingress_priority_group_id | 入力 | Ingress priority group id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
-| mode | mode | 出力 | Statistics mode |
-| counters | counters | 入力 | Array of resulting counter values. |
+| ingress_priority_group_id | sai_object_id_t | 入力 | Ingress priority group id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
+| mode | sai_stats_mode_t | 入力 | Statistics mode |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_clear_ingress_priority_group_stats_fn
-Clear ingress priority group statistics counters.
+**Brief**: Clear ingress priority group statistics counters.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| ingress_priority_group_id | ingress_priority_group_id | 入力 | Ingress priority group id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
+| ingress_priority_group_id | sai_object_id_t | 入力 | Ingress priority group id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_buffer_pool_fn
-Create buffer pool
+**Brief**: Create buffer pool
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_pool_id | buffer_pool_id | 出力 | Buffer pool id |
-| switch_id | switch_id | 出力 | Switch id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| buffer_pool_id | sai_object_id_t * | 出力 | Buffer pool id |
+| switch_id | sai_object_id_t | 入力 | Switch id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_buffer_pool_fn
-Remove buffer pool
+**Brief**: Remove buffer pool
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_pool_id | buffer_pool_id | 出力 | Buffer pool id |
+| buffer_pool_id | sai_object_id_t | 入力 | Buffer pool id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_buffer_pool_attribute_fn
-Set buffer pool attribute
+**Brief**: Set buffer pool attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_pool_id | buffer_pool_id | 出力 | Buffer pool id |
-| attr | attr | 出力 | Attribute |
+| buffer_pool_id | sai_object_id_t | 入力 | Buffer pool id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_buffer_pool_attribute_fn
-Get buffer pool attributes
+**Brief**: Get buffer pool attributes
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_pool_id | buffer_pool_id | 出力 | Buffer pool id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| buffer_pool_id | sai_object_id_t | 入力 | Buffer pool id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_buffer_pool_stats_fn
-Get buffer pool statistics counters. Deprecated for backward compatibility.
+**Brief**: Get buffer pool statistics counters. Deprecated for backward compatibility.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_pool_id | buffer_pool_id | 出力 | Buffer pool id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
-| counters | counters | 入力 | Array of resulting counter values. |
+| buffer_pool_id | sai_object_id_t | 入力 | Buffer pool id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_buffer_pool_stats_ext_fn
-Get buffer pool statistics counters extended.
+**Brief**: Get buffer pool statistics counters extended.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_pool_id | buffer_pool_id | 出力 | Buffer pool id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
-| mode | mode | 出力 | Statistics mode |
-| counters | counters | 入力 | Array of resulting counter values. |
+| buffer_pool_id | sai_object_id_t | 入力 | Buffer pool id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
+| mode | sai_stats_mode_t | 入力 | Statistics mode |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_clear_buffer_pool_stats_fn
-Clear buffer pool statistics counters.
+**Brief**: Clear buffer pool statistics counters.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_pool_id | buffer_pool_id | 出力 | Buffer pool id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
+| buffer_pool_id | sai_object_id_t | 入力 | Buffer pool id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_create_buffer_profile_fn
-Create buffer profile
+**Brief**: Create buffer profile
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_profile_id | buffer_profile_id | 出力 | Buffer profile id |
-| switch_id | switch_id | 出力 | Switch object id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| buffer_profile_id | sai_object_id_t * | 出力 | Buffer profile id |
+| switch_id | sai_object_id_t | 入力 | Switch object id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_buffer_profile_fn
-Remove buffer profile
+**Brief**: Remove buffer profile
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_profile_id | buffer_profile_id | 出力 | Buffer profile id |
+| buffer_profile_id | sai_object_id_t | 入力 | Buffer profile id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_buffer_profile_attribute_fn
-Set buffer profile attribute
+**Brief**: Set buffer profile attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_profile_id | buffer_profile_id | 出力 | Buffer profile id |
-| attr | attr | 出力 | Attribute |
+| buffer_profile_id | sai_object_id_t | 入力 | Buffer profile id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_buffer_profile_attribute_fn
-Get buffer profile attributes
+**Brief**: Get buffer profile attributes
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| buffer_profile_id | buffer_profile_id | 出力 | Buffer profile id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| buffer_profile_id | sai_object_id_t | 入力 | Buffer profile id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 

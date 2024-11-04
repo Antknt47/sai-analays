@@ -12,100 +12,100 @@
 
 
 ## sai_create_policer_fn
-Create Policer
+**Brief**: Create Policer
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| policer_id | policer_id | 出力 | The policer id |
-| switch_id | switch_id | 出力 | Switch id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| attr_list | attr_list | 出力 | Array of attributes |
+| policer_id | sai_object_id_t * | 出力 | The policer id |
+| switch_id | sai_object_id_t | 入力 | Switch id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_remove_policer_fn
-Delete policer
+**Brief**: Delete policer
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| policer_id | policer_id | 出力 | Policer id |
+| policer_id | sai_object_id_t | 入力 | Policer id |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_set_policer_attribute_fn
-Set Policer attribute
+**Brief**: Set Policer attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| policer_id | policer_id | 出力 | Policer id |
-| attr | attr | 出力 | Attribute |
+| policer_id | sai_object_id_t | 入力 | Policer id |
+| attr | sai_attribute_t * | 入力 | Attribute |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_policer_attribute_fn
-Get Policer attribute
+**Brief**: Get Policer attribute
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| policer_id | policer_id | 出力 | Policer id |
-| attr_count | attr_count | 出力 | Number of attributes |
-| * | * | 入力 | @param[inout] attr_list Array of attributes |
+| policer_id | sai_object_id_t | 入力 | Policer id |
+| attr_count | uint32_t | 入力 | Number of attributes |
+| attr_list | sai_attribute_t * | 入力/出力 | Array of attributes |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_policer_stats_fn
-Get Policer Statistics. Deprecated for backward compatibility.
+**Brief**: Get Policer Statistics. Deprecated for backward compatibility.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| policer_id | policer_id | 出力 | Policer id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Array of counter ids |
-| counters | counters | 入力 | Array of resulting counter values. |
+| policer_id | sai_object_id_t | 入力 | Policer id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Array of counter ids |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_get_policer_stats_ext_fn
-Get Policer Statistics extended
+**Brief**: Get Policer Statistics extended
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| policer_id | policer_id | 出力 | Policer id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Array of counter ids |
-| mode | mode | 出力 | Statistics mode |
-| counters | counters | 入力 | Array of resulting counter values. |
+| policer_id | sai_object_id_t | 入力 | Policer id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Array of counter ids |
+| mode | sai_stats_mode_t | 入力 | Statistics mode |
+| counters | uint64_t * | 出力 | Array of resulting counter values. |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
 
 ## sai_clear_policer_stats_fn
-Clear Policer statistics counters.
+**Brief**: Clear Policer statistics counters.
 
 **引数**:
 
 | 引数名 | 型 | 入力/出力 | 説明 |
 |--------|----------|-----------|------|
-| policer_id | policer_id | 出力 | Policer id |
-| number_of_counters | number_of_counters | 入力 | Number of counters in the array |
-| counter_ids | counter_ids | 出力 | Specifies the array of counter ids |
+| policer_id | sai_object_id_t | 入力 | Policer id |
+| number_of_counters | uint32_t | 入力 | Number of counters in the array |
+| counter_ids | sai_stat_id_t * | 入力 | Specifies the array of counter ids |
 
 **Return Value**: `SAI_STATUS_SUCCESS` on success, failure status code on error
 
