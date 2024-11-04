@@ -1,0 +1,76 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_ipsec_fn,Create a IPsec object,ipsec_id,sai_object_id_t *,出力,The IPsec object id associated with this switch/PHY,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,The switch/PHY Object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_ipsec_fn,Delete the IPsec object,ipsec_id,sai_object_id_t,入力,The IPsec object id associated with this switch/PHY,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_ipsec_attribute_fn,Set IPsec attribute,ipsec_id,sai_object_id_t,入力,The IPsec object id associated with this switch/PHY,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_ipsec_attribute_fn,Get IPsec attribute,ipsec_id,sai_object_id_t,入力,The IPsec object id associated with this switch/PHY,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_ipsec_port_fn,Create a IPsec port,ipsec_port_id,sai_object_id_t *,出力,The IPsec port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,The switch/PHY Object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_ipsec_port_fn,Delete a IPsec port,ipsec_port_id,sai_object_id_t,入力,The IPsec port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_ipsec_port_attribute_fn,Set IPsec port attribute,ipsec_port_id,sai_object_id_t,入力,The IPsec port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_ipsec_port_attribute_fn,Get IPsec port attribute,ipsec_port_id,sai_object_id_t,入力,IPsec port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_get_ipsec_port_stats_fn,Get IPsec port counters,ipsec_port_id,sai_object_id_t,入力,IPsec port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_get_ipsec_port_stats_ext_fn,Get IPsec port counters extended,ipsec_port_id,sai_object_id_t,入力,IPsec port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,mode,sai_stats_mode_t,入力,Should match SAI_IPSEC_ATTR_STATS_MODE,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_clear_ipsec_port_stats_fn,Clear IPsec port counters,ipsec_port_id,sai_object_id_t,入力,IPsec port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+
+sai_create_ipsec_sa_fn,Create a IPsec Security Association,ipsec_sa_id,sai_object_id_t *,出力,The IPsec Security Association id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,The switch/PHY Object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_ipsec_sa_fn,Delete a IPsec Security Association,ipsec_sa_id,sai_object_id_t,入力,The IPsec Security Association id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_ipsec_sa_attribute_fn,Set IPsec Security Association attribute,ipsec_sa_id,sai_object_id_t,入力,The IPsec Security Association id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_ipsec_sa_attribute_fn,Get IPsec Security Association attribute,ipsec_sa_id,sai_object_id_t,入力,IPsec Security Association id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_get_ipsec_sa_stats_fn,Get IPsec Security Association counters,ipsec_sa_id,sai_object_id_t,入力,IPsec Security Association id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_get_ipsec_sa_stats_ext_fn,Get IPsec Security Association counters extended,ipsec_sa_id,sai_object_id_t,入力,IPsec Security Association id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,mode,sai_stats_mode_t,入力,Should match SAI_IPSEC_ATTR_STATS_MODE,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_clear_ipsec_sa_stats_fn,Clear IPsec Security Association counters,ipsec_sa_id,sai_object_id_t,入力,IPsec Security Association id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+
+sai_ipsec_sa_status_change_notification_fn,IPsec SA status change notification,count,uint32_t,入力,Number of notifications,
+,,data,sai_ipsec_sa_status_notification_t *,入力,Array of notifications,
+

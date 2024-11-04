@@ -1,0 +1,15 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_virtual_router_fn,Create virtual router,virtual_router_id,sai_object_id_t *,出力,Virtual router id,`SAI_STATUS_SUCCESS` on success
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_virtual_router_fn,Remove virtual router,virtual_router_id,sai_object_id_t,入力,Virtual router id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_virtual_router_attribute_fn,Set virtual router attribute Value,virtual_router_id,sai_object_id_t,入力,Virtual router id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_virtual_router_attribute_fn,Get virtual router attribute Value,virtual_router_id,sai_object_id_t,入力,Virtual router id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+

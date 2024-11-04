@@ -1,0 +1,71 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_dtel_fn,Create and return a DTEL object,dtel_id,sai_object_id_t *,出力,DTEL object,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_dtel_fn,Delete a DTEL object,dtel_id,sai_object_id_t,入力,DTEL object id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_dtel_attribute_fn,Set DTEL attribute,dtel_id,sai_object_id_t,入力,DTEL object id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_dtel_attribute_fn,Get DTEL attribute,dtel_id,sai_object_id_t,入力,DTEL object id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_dtel_queue_report_fn,Create and return a DTEL queue report object,dtel_queue_report_id,sai_object_id_t *,出力,DTEL queue report object id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_dtel_queue_report_fn,Delete a DTEL queue report,dtel_queue_report_id,sai_object_id_t,入力,DTEL queue report id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_dtel_queue_report_attribute_fn,Set DTEL queue report attribute,dtel_queue_report_id,sai_object_id_t,入力,DTEL queue report id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_dtel_queue_report_attribute_fn,Get DTEL queue report attribute,dtel_queue_report_id,sai_object_id_t,入力,DTEL queue report id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_dtel_int_session_fn,Create and return a DTEL INT session object,dtel_int_session_id,sai_object_id_t *,出力,DTEL INT session object id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_dtel_int_session_fn,Delete a DTEL INT session,dtel_int_session_id,sai_object_id_t,入力,DTEL INT session id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_dtel_int_session_attribute_fn,Set DTEL INT session attribute,dtel_int_session_id,sai_object_id_t,入力,DTEL INT session id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_dtel_int_session_attribute_fn,Get DTEL INT session attribute,dtel_int_session_id,sai_object_id_t,入力,DTEL INT session id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_dtel_report_session_fn,Create and return a DTEL report session object,dtel_report_session_id,sai_object_id_t *,出力,DTEL report session object,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_dtel_report_session_fn,Delete a DTEL report session,dtel_report_session_id,sai_object_id_t,入力,DTEL report session id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_dtel_report_session_attribute_fn,Set DTEL report session attribute,dtel_report_session_id,sai_object_id_t,入力,DTEL report session id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_dtel_report_session_attribute_fn,Get DTEL report session attribute,dtel_report_session_id,sai_object_id_t,入力,DTEL report session id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_dtel_event_fn,Create and return a DTEL event object,dtel_event_id,sai_object_id_t *,出力,DTEL event object id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_dtel_event_fn,Delete a DTEL event,dtel_event_id,sai_object_id_t,入力,DTEL event id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_dtel_event_attribute_fn,Set DTEL event attribute,dtel_event_id,sai_object_id_t,入力,DTEL event id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_dtel_event_attribute_fn,Get DTEL event attribute,dtel_event_id,sai_object_id_t,入力,DTEL event id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+

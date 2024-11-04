@@ -1,0 +1,29 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_stp_fn,Create STP instance with default port state as blocking.,stp_id,sai_object_id_t *,出力,STP instance id,`SAI_STATUS_SUCCESS` if operation is successful otherwise a different
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Value of attributes,
+
+sai_remove_stp_fn,Remove STP instance.,stp_id,sai_object_id_t,入力,STP instance id,`SAI_STATUS_SUCCESS` if operation is successful otherwise a different
+
+sai_set_stp_attribute_fn,Set the attribute of STP instance.,stp_id,sai_object_id_t,入力,STP instance id,`SAI_STATUS_SUCCESS` if operation is successful otherwise a different
+,,attr,sai_attribute_t *,入力,Attribute value,
+
+sai_get_stp_attribute_fn,Get the attribute of STP instance.,stp_id,sai_object_id_t,入力,STP instance id,`SAI_STATUS_SUCCESS` if operation is successful otherwise a different
+,,attr_count,uint32_t,入力,Number of the attribute,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_stp_port_fn,Create STP port object,stp_port_id,sai_object_id_t *,出力,STP port id,`SAI_STATUS_SUCCESS` if operation is successful otherwise a different
+,,switch_id,sai_object_id_t,入力,Switch ID,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Value of attributes,
+
+sai_remove_stp_port_fn,Remove STP port object.,stp_port_id,sai_object_id_t,入力,STP object id,`SAI_STATUS_SUCCESS` if operation is successful otherwise a different
+
+sai_set_stp_port_attribute_fn,Set the attribute of STP port.,stp_port_id,sai_object_id_t,入力,STP port id,`SAI_STATUS_SUCCESS` if operation is successful otherwise a different
+,,attr,sai_attribute_t *,入力,Attribute value,
+
+sai_get_stp_port_attribute_fn,Get the attribute of STP port.,stp_port_id,sai_object_id_t,入力,STP port id,`SAI_STATUS_SUCCESS` if operation is successful otherwise a different
+,,attr_count,uint32_t,入力,Number of the attribute,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+

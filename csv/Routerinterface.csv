@@ -1,0 +1,30 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_router_interface_fn,Create router interface.,router_interface_id,sai_object_id_t *,出力,Router interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_router_interface_fn,Remove router interface,router_interface_id,sai_object_id_t,入力,Router interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_router_interface_attribute_fn,Set router interface attribute,router_interface_id,sai_object_id_t,入力,Router interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_router_interface_attribute_fn,Get router interface attribute,router_interface_id,sai_object_id_t,入力,Router interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_get_router_interface_stats_fn,Get router interface statistics counters. Deprecated for backward compatibility.,router_interface_id,sai_object_id_t,入力,Router interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_get_router_interface_stats_ext_fn,Get router interface statistics counters extended.,router_interface_id,sai_object_id_t,入力,Router interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,mode,sai_stats_mode_t,入力,Statistics mode,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_clear_router_interface_stats_fn,Clear router interface statistics counters.,router_interface_id,sai_object_id_t,入力,Router interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+

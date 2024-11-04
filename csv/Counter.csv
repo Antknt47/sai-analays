@@ -1,0 +1,30 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_counter_fn,Create counter,counter_id,sai_object_id_t *,出力,Counter id,`SAI_STATUS_SUCCESS` on success
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_counter_fn,Remove counter,counter_id,sai_object_id_t,入力,Counter id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_counter_attribute_fn,Set counter attribute Value,counter_id,sai_object_id_t,入力,Counter id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_counter_attribute_fn,Get counter attribute Value,counter_id,sai_object_id_t,入力,Counter id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_get_counter_stats_fn,Get counter statistics counters. Deprecated for backward compatibility.,counter_id,sai_object_id_t,入力,Counter id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_get_counter_stats_ext_fn,Get counter statistics counters extended.,counter_id,sai_object_id_t,入力,Counter id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,mode,sai_stats_mode_t,入力,Statistics mode,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_clear_counter_stats_fn,Clear counter statistics counters.,counter_id,sai_object_id_t,入力,Counter id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+

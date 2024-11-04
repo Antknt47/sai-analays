@@ -1,0 +1,15 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_my_mac_fn,Create My MAC entry.,my_mac_id,sai_object_id_t *,出力,My MAC id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_my_mac_fn,Remove My MAC entry,my_mac_id,sai_object_id_t,入力,My MAC Id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_my_mac_attribute_fn,Set My MAC entry attribute,my_mac_id,sai_object_id_t,入力,My MAC id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_my_mac_attribute_fn,Get My MAC entry attribute,my_mac_id,sai_object_id_t,入力,My MAC id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+

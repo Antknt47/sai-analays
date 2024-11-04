@@ -1,0 +1,46 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_fdb_entry_fn,Create FDB entry,fdb_entry,sai_fdb_entry_t *,入力,FDB entry,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_fdb_entry_fn,Remove FDB entry,fdb_entry,sai_fdb_entry_t *,入力,FDB entry,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_fdb_entry_attribute_fn,Set FDB entry attribute value,fdb_entry,sai_fdb_entry_t *,入力,FDB entry,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_fdb_entry_attribute_fn,Get FDB entry attribute value,fdb_entry,sai_fdb_entry_t *,入力,FDB entry,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_flush_fdb_entries_fn,Remove all FDB entries by attribute set in sai_fdb_flush_attr,switch_id,sai_object_id_t,入力,Switch object id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_fdb_event_notification_fn,FDB notifications,count,uint32_t,入力,Number of notifications,
+,,data,sai_fdb_event_notification_data_t *,入力,Pointer to FDB event notification data array,
+
+sai_bulk_create_fdb_entry_fn,Bulk create FDB entry,object_count,uint32_t,入力,Number of objects to create,`SAI_STATUS_SUCCESS` on success when all objects are created or
+,,fdb_entry,sai_fdb_entry_t *,入力,List of object to create,
+,,attr_count,uint32_t *,入力,List of attr_count. Caller passes the number,
+,,*attr_list,sai_attribute_t *,入力/出力,-,
+,,mode,sai_bulk_op_error_mode_t,入力,Bulk operation error handling mode.,
+,,object_statuses,sai_status_t *,出力,List of status for every object. Caller needs to,
+
+sai_bulk_remove_fdb_entry_fn,Bulk remove FDB entry,object_count,uint32_t,入力,Number of objects to remove,`SAI_STATUS_SUCCESS` on success when all objects are removed or
+,,fdb_entry,sai_fdb_entry_t *,入力,List of objects to remove,
+,,mode,sai_bulk_op_error_mode_t,入力,Bulk operation error handling mode.,
+,,object_statuses,sai_status_t *,出力,List of status for every object. Caller needs to,
+
+sai_bulk_set_fdb_entry_attribute_fn,Bulk set attribute on FDB entry,object_count,uint32_t,入力,Number of objects to set attribute,`SAI_STATUS_SUCCESS` on success when all objects are set or
+,,fdb_entry,sai_fdb_entry_t *,入力,List of objects to set attribute,
+,,attr_list,sai_attribute_t *,入力,List of attributes to set on objects, one attribute per object,
+,,mode,sai_bulk_op_error_mode_t,入力,Bulk operation error handling mode.,
+,,object_statuses,sai_status_t *,出力,List of status for every object. Caller needs to,
+
+sai_bulk_get_fdb_entry_attribute_fn,Bulk get attribute on FDB entry,object_count,uint32_t,入力,Number of objects to get attribute,`SAI_STATUS_SUCCESS` on success when all objects are get or
+,,fdb_entry,sai_fdb_entry_t *,入力,List of objects to get attribute,
+,,attr_count,uint32_t *,入力,List of attr_count. Caller passes the number,
+,,*attr_list,sai_attribute_t *,入力/出力,-,
+,,mode,sai_bulk_op_error_mode_t,入力,Bulk operation error handling mode,
+,,object_statuses,sai_status_t *,出力,List of status for every object. Caller needs to,
+

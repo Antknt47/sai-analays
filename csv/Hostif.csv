@@ -1,0 +1,98 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_hostif_trap_group_fn,Create host interface trap group,hostif_trap_group_id,sai_object_id_t *,出力,Host interface trap group id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_hostif_trap_group_fn,Remove host interface trap group,hostif_trap_group_id,sai_object_id_t,入力,Host interface trap group id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_hostif_trap_group_attribute_fn,Set host interface trap group attribute value.,hostif_trap_group_id,sai_object_id_t,入力,Host interface trap group id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_hostif_trap_group_attribute_fn,Get host interface trap group attribute value.,hostif_trap_group_id,sai_object_id_t,入力,Host interface trap group id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_hostif_trap_fn,Create host interface trap,hostif_trap_id,sai_object_id_t *,出力,Host interface trap id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_hostif_trap_fn,Remove host interface trap,hostif_trap_id,sai_object_id_t,入力,Host interface trap id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_hostif_trap_attribute_fn,Set trap attribute value.,hostif_trap_id,sai_object_id_t,入力,Host interface trap id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_hostif_trap_attribute_fn,Get trap attribute value.,hostif_trap_id,sai_object_id_t,入力,Host interface trap id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_hostif_user_defined_trap_fn,Create host interface user defined trap,hostif_user_defined_trap_id,sai_object_id_t *,出力,Host interface user defined trap id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_hostif_user_defined_trap_fn,Remove host interface user defined trap,hostif_user_defined_trap_id,sai_object_id_t,入力,Host interface user defined trap id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_hostif_user_defined_trap_attribute_fn,Set user defined trap attribute value.,hostif_user_defined_trap_id,sai_object_id_t,入力,Host interface user defined trap id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_hostif_user_defined_trap_attribute_fn,Get user defined trap attribute value.,hostif_user_defined_trap_id,sai_object_id_t,入力,Host interface user defined trap id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_hostif_fn,Create host interface,hostif_id,sai_object_id_t *,出力,Host interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_hostif_fn,Remove host interface,hostif_id,sai_object_id_t,入力,Host interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_hostif_attribute_fn,Set host interface attribute,hostif_id,sai_object_id_t,入力,Host interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_hostif_attribute_fn,Get host interface attribute,hostif_id,sai_object_id_t,入力,Host interface id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_hostif_table_entry_fn,Create host interface table entry,hostif_table_entry_id,sai_object_id_t *,出力,Host interface table entry,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch object id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_hostif_table_entry_fn,Remove host interface table entry,hostif_table_entry_id,sai_object_id_t,入力,Host interface table entry,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_hostif_table_entry_attribute_fn,Set host interface table entry attribute,hostif_table_entry_id,sai_object_id_t,入力,Host interface table entry,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_hostif_table_entry_attribute_fn,Get host interface table entry attribute,hostif_table_entry_id,sai_object_id_t,入力,Host interface table entry,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_recv_hostif_packet_fn,Hostif receive function,hostif_id,sai_object_id_t,入力,Host interface id,`SAI_STATUS_SUCCESS` on success #SAI_STATUS_BUFFER_OVERFLOW if
+,,buffer_size,sai_size_t *,入力/出力,-,
+,,buffer,void *,出力,Packet buffer,
+,,attr_count,uint32_t *,入力/出力,-,
+,,attr_list,sai_attribute_t *,出力,Array of attributes,
+
+sai_send_hostif_packet_fn,Hostif send function,hostif_id,sai_object_id_t,入力,Host interface id.,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,buffer_size,sai_size_t,入力,Packet size in bytes,
+,,buffer,void *,入力,Packet buffer,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_allocate_hostif_packet_fn,Hostif allocate function,hostif_id,sai_object_id_t,入力,Host interface id.,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,buffer_size,sai_size_t,入力,Packet size in bytes,
+,,*buffer,void *,入力/出力,-,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_free_hostif_packet_fn,Hostif free function,hostif_id,sai_object_id_t,入力,Host interface id.,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,buffer,void *,入力/出力,-,
+
+sai_packet_event_notification_fn,Hostif receive callback,switch_id,sai_object_id_t,入力,Switch Object ID,
+,,buffer_size,sai_size_t,入力,Actual packet size in bytes,
+,,buffer,void *,入力,Packet buffer,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+

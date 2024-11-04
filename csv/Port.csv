@@ -1,0 +1,96 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_port_fn,Create port,port_id,sai_object_id_t *,出力,Port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_port_fn,Remove port,port_id,sai_object_id_t,入力,Port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_port_attribute_fn,Set port attribute value.,port_id,sai_object_id_t,入力,Port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_port_attribute_fn,Get port attribute value.,port_id,sai_object_id_t,入力,Port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_get_port_stats_fn,Get port statistics counters. Deprecated for backward compatibility.,port_id,sai_object_id_t,入力,Port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_get_port_stats_ext_fn,Get port statistics counters extended.,port_id,sai_object_id_t,入力,Port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,mode,sai_stats_mode_t,入力,Statistics mode,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_clear_port_stats_fn,Clear port statistics counters.,port_id,sai_object_id_t,入力,Port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+
+sai_clear_port_all_stats_fn,Clear port's all statistics counters.,port_id,sai_object_id_t,入力,Port id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_port_state_change_notification_fn,Port state change notification,count,uint32_t,入力,Number of notifications,
+,,data,sai_port_oper_status_notification_t *,入力,Array of port operational status,
+
+sai_port_host_tx_ready_notification_fn,Port host tx ready notification,switch_id,sai_object_id_t,入力,Switch Id,
+,,port_id,sai_object_id_t,入力,Port Id,
+,,host_tx_ready_status,sai_port_host_tx_ready_status_t,入力,New tx ready status,
+
+sai_create_port_pool_fn,Create port pool,port_pool_id,sai_object_id_t *,出力,Port pool id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_port_pool_fn,Remove port pool,port_pool_id,sai_object_id_t,入力,Port pool id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_port_pool_attribute_fn,Set port pool attribute value.,port_pool_id,sai_object_id_t,入力,Port pool id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_port_pool_attribute_fn,Get port pool attribute value.,port_pool_id,sai_object_id_t,入力,Port pool id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_get_port_pool_stats_fn,Get port pool statistics counters. Deprecated for backward compatibility.,port_pool_id,sai_object_id_t,入力,Port pool id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_get_port_pool_stats_ext_fn,Get port pool statistics counters extended.,port_pool_id,sai_object_id_t,入力,Port pool id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+,,mode,sai_stats_mode_t,入力,Statistics mode,
+,,counters,uint64_t *,出力,Array of resulting counter values.,
+
+sai_clear_port_pool_stats_fn,Clear port pool statistics counters.,port_pool_id,sai_object_id_t,入力,Port pool id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,number_of_counters,uint32_t,入力,Number of counters in the array,
+,,counter_ids,sai_stat_id_t *,入力,Specifies the array of counter ids,
+
+sai_create_port_serdes_fn,Create port serdes,port_serdes_id,sai_object_id_t *,出力,Port serdes id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_port_serdes_fn,Remove port serdes,port_serdes_id,sai_object_id_t,入力,Port serdes id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_port_serdes_attribute_fn,Set Port serdes attribute value.,port_serdes_id,sai_object_id_t,入力,Port serdes id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_port_serdes_attribute_fn,Get Port serdes attribute value.,port_serdes_id,sai_object_id_t,入力,Port serdes id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_port_connector_fn,Create port connector,port_connector_id,sai_object_id_t *,出力,Port connector id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_port_connector_fn,Remove port connector,port_connector_id,sai_object_id_t,入力,Port connector id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_port_connector_attribute_fn,Set port connector attribute value.,port_connector_id,sai_object_id_t,入力,Port connector id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_port_connector_attribute_fn,Get port connector attribute value.,port_connector_id,sai_object_id_t,入力,Port connector id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+

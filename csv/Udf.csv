@@ -1,0 +1,43 @@
+関数名,概要,引数名,型,入力/出力,説明,戻り値
+sai_create_udf_fn,Create UDF,udf_id,sai_object_id_t *,出力,UDF id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_udf_fn,Remove UDF,udf_id,sai_object_id_t,入力,UDF id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_udf_attribute_fn,Set UDF attribute,udf_id,sai_object_id_t,入力,UDF id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_udf_attribute_fn,Get UDF attribute value,udf_id,sai_object_id_t,入力,UDF id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_udf_match_fn,Create UDF match,udf_match_id,sai_object_id_t *,出力,UDF match id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_udf_match_fn,Remove UDF match,udf_match_id,sai_object_id_t,入力,UDF match id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_udf_match_attribute_fn,Set UDF match attribute,udf_match_id,sai_object_id_t,入力,UDF match id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_udf_match_attribute_fn,Get UDF match attribute value,udf_match_id,sai_object_id_t,入力,UDF match id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
+sai_create_udf_group_fn,Create UDF group,udf_group_id,sai_object_id_t *,出力,UDF group id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,switch_id,sai_object_id_t,入力,Switch id,
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力,Array of attributes,
+
+sai_remove_udf_group_fn,Remove UDF group,udf_group_id,sai_object_id_t,入力,UDF group id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+
+sai_set_udf_group_attribute_fn,Set UDF group attribute,udf_group_id,sai_object_id_t,入力,UDF group id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr,sai_attribute_t *,入力,Attribute,
+
+sai_get_udf_group_attribute_fn,Get UDF group attribute value,udf_group_id,sai_object_id_t,入力,UDF group id,`SAI_STATUS_SUCCESS` on success, failure status code on error
+,,attr_count,uint32_t,入力,Number of attributes,
+,,attr_list,sai_attribute_t *,入力/出力,-,
+
